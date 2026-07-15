@@ -46,4 +46,3 @@ db.users.updateOne({ email: "you@example.com" }, { $set: { role: "Admin" } })
 - `GET /api/posts/admin`, `POST /api/posts`, `PATCH /api/posts/:id`, `DELETE /api/posts/:id` (Admin only)
 - `GET /api/users`, `POST /api/users`, `GET /api/users/:id`, `PATCH /api/users/:id`, `DELETE /api/users/:id` (Admin only)
 
-See `DEPLOYMENT.md` for deploying the frontend to Vercel and the backend to a VPS with PM2 + Nginx.
