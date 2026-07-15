@@ -8,10 +8,14 @@ import ApiError from "../utils/ApiError.js";
 
 const app = express();
 
-const corsOrigin = process.env.CORS_ORIGIN;
-
+const corsOptions = {
+  origin: process.env.FRONTEND_URL, // Allow only your Vercel frontend
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow cookies or auth headers if needed
+  optionsSuccessStatus: 200 
+};
 app.use(express.json());
-app.use(cors({ origin: corsOrigin ? corsOrigin.split(",") : true, credentials: true }));
+app.use(cors(corsOptions));
 app.use(cookieParser());
 
 app.use("/api/auth", authroutes);
