@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.sticky-footer-ad {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
